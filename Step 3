@@ -1,0 +1,10 @@
+// Step 3: Pick (Gripper Close)
+
+// Gripper 제어
+Gripper gripper;
+
+// 초기 상태 (열림)
+gripper.open();    // OPEN 상태
+
+// 물체를 잡기
+gripper.close();   // CLOSE 상태 (물체 잡기)
