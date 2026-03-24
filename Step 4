@@ -1,0 +1,18 @@
+// Step 4: Move (Base Rotation with Gripper Closed)
+
+// 현재 상태: 물체를 잡은 상태
+Gripper gripper;
+gripper.close();   // 물체 잡고 있음
+
+// Base 회전 설정
+double theta1 = 0.0;
+double theta2 = 0.0;
+double linear3 = 0.0;
+double base   = 90.0;   // θ3 (Base Rotation)
+
+RobotArm arm;
+
+// 위치 및 방향 이동
+arm.setTarget(theta1, theta2, linear3);
+arm.setBase(base);
+arm.update();
