@@ -1,0 +1,18 @@
+// Step 2: Approach (Move to Object)
+
+// Joint & Linear 설정
+double theta1 = 10.0;   // Joint 1 (Rotation)
+double theta2 = 20.0;   // Joint 2 (Rotation)
+double linear3 = 100.0; // Linear Axis (mm)
+double base   = 0.0;    // Base 유지
+
+RobotArm arm;
+Gripper gripper;
+
+// 위치 이동
+arm.setTarget(theta1, theta2, linear3);
+arm.setBase(base);
+arm.update();
+
+// 아직 잡지 않음
+gripper.open();   // OPEN 상태 유지
