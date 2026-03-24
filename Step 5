@@ -1,0 +1,16 @@
+// Step 5: Place (Down + Release)
+
+// 내려가기 (직선 이동)
+double theta1 = 0.0;
+double theta2 = 0.0;
+double linear3 = -100.0;   // ↓ 내려감 (mm)
+
+RobotArm arm;
+
+// 위치 이동 (아래로)
+arm.setTarget(theta1, theta2, linear3);
+arm.update();
+
+// 물체 놓기
+Gripper gripper;
+gripper.open();   // OPEN → release
