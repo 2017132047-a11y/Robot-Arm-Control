@@ -1,0 +1,20 @@
+// Step 1: Initial State (Home Position)
+
+// Joint & Linear 초기값
+double theta1 = 0.0;    // Joint 1 (Rotation)
+double theta2 = 0.0;    // Joint 2 (Rotation)
+double linear3 = 0.0;   // Linear Axis (mm)
+double base   = 0.0;    // Base Rotation
+
+RobotArm arm;
+Gripper gripper;
+
+// 로봇팔 초기 위치 설정
+arm.setTarget(theta1, theta2, linear3);
+arm.setBase(base);
+arm.update();
+
+// 그리퍼 초기 상태
+gripper.open();   // OPEN 상태 (대기)
+
+
